@@ -26,4 +26,12 @@ class LoginController extends Controller
      * @var string
      */
     protected $redirectTo = '/myadmin-home';
+
+    /**
+     * Where to redirect users after logout.
+     */
+    protected function loggedOut(\Illuminate\Http\Request $request)
+    {
+        return redirect('/login');
+    }
 }
